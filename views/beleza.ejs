@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>RADTEK ECOMMERCE</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/pagefilter.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+
+    <link rel="icon" href="/setting/logo.gif">
+</head>
+
+<body>
+    <script>
+        $('document').ready(() => {
+
+            if ('<%=msg%>' == 'Entrar') {
+                $('.teste4444').append('<a href="/login" class="btn btn-success">Entrar</a>')
+
+            }
+            else {
+                $('.teste4444').append('<li class="nav-item dropdown"><button class="nav-link dropdown-toggle btn btn-light" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="identify"><%=msg%></span><img class="avatar" src="/upload_user/perfil_masculino.png"></button><div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink"><a class="dropdown-item" href="#">Pedidos</a><a class="dropdown-item" href="/paineluser">Minha conta</a><a class="dropdown-item" href="/logout">Sair</a></div></li>')
+
+            }
+            // ok
+
+        });
+
+    </script>
+
+    <header>
+        <nav class="navbar navbar-expand-lg nav">
+            <a class="navbar-brand" href="/"><img class="logo" src="/setting/Logo.gif" alt="Logo"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavDropdown">
+                <ion-icon class="dropdownX" name="reorder-four-outline"></ion-icon>
+
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto teste4444 text-white">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tecnologia">Tecnologia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="/beleza">beleza</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/moda">Moda</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <section>
+            <div class="row">
+                
+                <div class="boxprodut-content">
+
+                    <%belezaProduto.forEach(belezaProduto=>{%>
+                        <div class="boxprodut">
+                            <img class="imageProdut" src="/uploadProdut/<%=belezaProduto.image%>">
+                            <span class="nameProdut">
+                                <%=belezaProduto.name%>
+                            </span>
+                            <span class="valorProdut">
+                                R$<%=belezaProduto.valor%>
+                            </span><br>
+                            <span class="freteProdut">
+                                Frete: <%=belezaProduto.frete%>
+                            </span>
+                            <form method="POST" action="/dadosvenda">
+                                <input type="hidden" value="<%=belezaProduto.name%>" name="nomeProdu">
+                                <input type="hidden" value="<%=belezaProduto.frete%>" name="freteProdu">
+                                <input type="hidden" value="<%=belezaProduto.valor%>" name="valorProdu">
+                                <input type="hidden" value="<%=belezaProduto.descricao%>" name="descProdu">
+                                <input type="hidden" value="<%=belezaProduto.estoque%>" name="estoqueProdu">
+
+                                <input type="hidden" value="/uploadProdut/<%=belezaProduto.image%>" name="imgProdu">
+                                <input type="submit" class="w-100 mb-1 p-2 btn btn-success" value="Comprar agora">
+                                <input class="w-100 mb-1 p-2 btn btn-danger" value="Adiconar ao carrinho">
+                            </form>
+
+                        </div>
+
+
+                        <%})%>
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="container pt-4">
+            <section class="direct">
+                <a href="">
+                    <ion-icon class="direct-icon" name="logo-instagram"></ion-icon>
+                </a>
+
+                <a href="">
+                    <ion-icon class="direct-icon" name="logo-youtube"></ion-icon>
+                </a>
+
+                <a href="">
+                    <ion-icon class="direct-icon" name="logo-facebook"></ion-icon>
+                </a>
+
+                <a href="">
+                    <ion-icon class="direct-icon" name="logo-twitter"></ion-icon>
+                </a>
+
+                <a href="">
+                    <ion-icon class="direct-icon" name="logo-linkedin"></ion-icon>
+                </a>
+
+            </section>
+        </div>
+
+        <div>
+            &copy;Todos direitos reservados
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

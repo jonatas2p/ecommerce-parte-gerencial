@@ -1,0 +1,124 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background-color: rgb(243, 242, 242);
+}
+
+.logo {
+    width: 10vh;
+
+    border-radius: 10vw;
+}
+
+.nav {
+    background-color: black;
+    color: white;
+}
+
+div ul li a {
+    color: white;
+}
+
+/* imagem perfil */
+
+li button label {
+    width: auto;
+}
+
+.identify {
+    width: 8vw;
+    margin: 0 0.5vw;
+
+    text-transform: capitalize;
+
+
+}
+
+.avatar {
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 2vw;
+}
+
+/* fim do header */
+
+/* produto */
+
+
+.nameProd {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.8em;
+    padding: 0.5em;
+}
+
+.imgProd {
+    width: 80%;
+    max-height: 28vw;
+    margin: 2vw;
+}
+
+/* margin entre a imagem e informacao*/
+.mg {
+    border-left: 1px solid rgb(230, 228, 228);
+}
+
+.descrept {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.8em;
+    text-transform: capitalize;
+    text-transform: uppercase;
+}
+
+/* exibicao formulario da compra */
+
+.formpedido {
+    width: 80%;
+    padding: 1em;
+}
+.formpedido label{
+    text-transform: capitalize;
+}
+.infocompra strong{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+.infocompra img {
+    width: 100%;
+    background: none;
+}
+
+.infocompra span {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1em;
+    text-transform: capitalize;
+    padding: 0%;
+}
+
+
+footer {
+    position: absolute;
+    top: 100%;
+    margin-bottom: 0px;
+    background-color: black;
+    color: #FFF;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+
+}
+
+.direct a {
+    text-decoration: none;
+}
+
+.direct a .direct-icon {
+    font-size: 1.5vw;
+    color: white;
+    padding: 0.2vw 1vw;
+
+}

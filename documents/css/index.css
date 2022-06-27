@@ -1,0 +1,340 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+.logo {
+    width: 10vh;
+    border-radius: 10vw;
+}
+
+.nav {
+    background-color: black;
+    color: white;
+}
+
+.dropdownX {
+    font-size: 6vw;
+    color: white;
+}
+
+div ul li a {
+    color: white;
+    font-weight: bold;
+}
+
+/* carrinho */
+.carrinho {
+    margin: 0 0.5em;
+    width: 8vh;
+    height: 6vh;
+    border: 1px solid white;
+    border-radius: 1em;
+    background-color: transparent;
+    text-align: center;
+
+}
+
+.carrinho .iconbuy {
+    font-size: 3.5vh;
+    color: rgb(209, 52, 52);
+}
+
+/* imagem perfil */
+
+li button label {
+    width: auto;
+}
+
+
+.identify {
+    width: 8vw;
+    margin: 0 0.5vw;
+    text-transform: capitalize;
+
+}
+
+.avatar {
+    width: 4vh;
+    height: 4vh;
+    border-radius: 2vw;
+}
+
+
+.nameProdut {
+    border: none;
+    text-align: left;
+
+}
+
+.valorProdut {
+    border: none;
+    float: right;
+    color: rgb(9, 167, 22);
+
+}
+
+.freteProdut {
+    border: none;
+    text-align: right;
+    color: rgb(9, 167, 22);
+
+}
+
+.boxProdut p {
+    margin: 0;
+
+}
+
+.imageProdut {
+    width: 100%;
+    height: 12vw;
+
+}
+
+.boxprodut-content {
+    display: flex;
+    justify-content: start;
+    width: 90vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+
+.boxprodut {
+    width: 21.10rem;
+    margin: 0.2vw;
+    background-color: white;
+    padding: 0.2vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    border-radius: 10px;
+    text-transform: capitalize;
+    border: 1px solid rgb(247, 247, 247);
+
+}
+
+
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .imageProdut {
+        width: 100%;
+        height: 50vw;
+
+    }
+    .user{
+        width: 100%;
+        margin: 2vw 0;
+    }
+
+    /* carrinho */
+    .carrinho {
+        margin: 0 0.5em;
+        width: 100%;
+        height: 6vh;
+        border: 1px solid white;
+        border-radius: 1em;
+        background-color: transparent;
+
+    }
+
+    .boxprodut-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .boxprodut {
+        width: 100vw;
+        margin: 0.5em;
+        background-color: white;
+        padding: 0.2vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 0.5vw auto;
+
+
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .imageProdut {
+        width: 100%;
+        height: 40vw;
+
+    }
+    .user{
+        width: 100%;
+        margin: 2vw 0;
+    }
+
+    /* carrinho */
+    .carrinho {
+        margin: 0 0.5em;
+        width: 100%;
+        height: 6vh;
+        border: 1px solid white;
+        border-radius: 1em;
+        background-color: transparent;
+
+    }
+
+    .boxprodut-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+    }
+
+    .boxprodut {
+        width: 100vw;
+        margin: 0.5em;
+        background-color: white;
+        padding: 0.2vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: medium;
+        margin: 0.5vw auto;
+
+
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .imageProdut {
+        width: 100%;
+        height: 22vw;
+
+    }
+    .user{
+        width: 100%;
+    }
+
+    /* carrinho */
+    .carrinho {
+        width: 100%;
+        margin: 2vw 0;
+
+
+    }
+
+    .carrinho .iconbuy {
+        font-size: 150%;
+        color: white;
+    }
+
+    .boxprodut-content {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        min-width: 92vw;
+        max-width: 96.2vw;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+    }
+
+    .boxprodut {
+        width: 30vw;
+        margin: 0.2vw;
+        background-color: white;
+        padding: 0.2vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: medium;
+        border-radius: 10px;
+        text-transform: capitalize;
+        margin: 0.5vw auto;
+
+
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .imageProdut {
+        width: 100%;
+        height: 20vw;
+
+    }
+
+    .boxprodut-content {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        min-width: 92vw;
+        max-width: 96.2vw;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+    }
+
+    .boxprodut {
+        width: 30vw;
+        margin: 0.2vw;
+        background-color: white;
+        padding: 0.2vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: medium;
+        border-radius: 10px;
+        text-transform: capitalize;
+
+
+    }
+
+
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) and (max-width: 1669px) {
+    .boxprodut-content {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        min-width: 92vw;
+        max-width: 96.2vw;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+    }
+
+    .boxprodut {
+        width: 18vw;
+        margin: 0.2vw;
+        background-color: white;
+        padding: 0.2vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: medium;
+        border-radius: 10px;
+        text-transform: capitalize;
+        margin: 0.5vw auto;
+
+    }
+
+}
+
+
+
+footer {
+    margin-top: auto;
+    background-color: black;
+    color: #FFF;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+
+}
+
+.direct a {
+    text-decoration: none;
+}
+
+.direct a .direct-icon {
+    font-size: 4vh;
+    color: white;
+    padding: 0.2vw 1vw;
+
+}

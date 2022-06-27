@@ -1,0 +1,132 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+.logo {
+    width: 10vh;
+    border-radius: 10vw;
+}
+
+.nav {
+    background-color: black;
+    color: white;
+}
+
+.dropdownX {
+    font-size: 6vw;
+    color: white;
+}
+
+div ul li a {
+    color: white;
+    font-weight: bold;
+}
+
+/* carrinho */
+.carrinho {
+    margin: 0 0.5em;
+    width: 8vh;
+    height: 6vh;
+    border: 1px solid white;
+    border-radius: 1em;
+    background-color: transparent;
+    text-align: center;
+
+}
+
+.carrinho .iconbuy {
+    font-size: 3.5vh;
+    color: rgb(209, 52, 52);
+
+}
+
+/* imagem perfil */
+
+li button label {
+    width: auto;
+}
+
+
+.identify {
+    width: 8vw;
+    margin: 0 0.5vw;
+    text-transform: capitalize;
+
+}
+
+.avatar {
+    width: 4vh;
+    height: 4vh;
+    border-radius: 2vw;
+}
+/* conteudo */
+
+.conteudo{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    margin: 3vw  auto;
+    box-shadow: 2px 1px 2px 4px rgb(231, 231, 231);
+    padding: 2em;
+    background-color: white;
+    border-radius: 0.2em;
+}
+.imagee{
+    display: flex;
+    justify-content: center;
+}
+
+.imagee img{
+    width: 30vh;
+    height: 16vh;
+    padding: 0.5em;
+
+
+}
+.infoo p{
+    color: rgba(36, 206, 58, 0.651);
+    margin: 0;
+    text-align: left;
+}
+.acaoo button{
+    width: 15vh;
+    text-transform: capitalize;
+
+}
+
+
+.confirma button{
+    text-transform: capitalize;
+    padding: 1em;
+    border: 1px groove white;
+    margin: 1em 0;
+}
+
+
+
+
+
+
+
+
+footer {
+    margin-bottom: 0px;
+    background-color: black;
+    color: #FFF;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+
+}
+
+.direct a {
+    text-decoration: none;
+}
+
+.direct a .direct-icon {
+    font-size: 1.5vw;
+    color: white;
+    padding: 0.2vw 1vw;
+
+}

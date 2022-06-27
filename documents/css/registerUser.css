@@ -1,0 +1,70 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+.nav a img {
+    width: 10vh;
+    border-radius: 10vw;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+}
+
+form {
+    width: 50vh;
+    margin: 2vw auto;
+    background-color: white;
+    padding: 2vw;
+    border-radius: 1vw;
+}
+
+
+
+header .status {
+
+    text-align: center;
+}
+
+.msg_status{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    text-transform:capitalize;
+    color: red;
+
+}
+
+.status strong {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.6em;
+    text-transform: capitalize;
+    background-color: rgb(39, 185, 46);
+    color: white;
+    border: 2px solid green;
+    padding:0.2vw 5vw;
+
+}
+
+
+footer {
+    position: absolute;
+    top: 100%;
+    margin-bottom: 0px;
+    background-color: black;
+    color: #FFF;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+
+}
+
+.direct a {
+    text-decoration: none;
+}
+
+.direct a .direct-icon {
+    font-size: 4vh;
+    color: white;
+    padding: 0.2vw 1vw;
+
+}

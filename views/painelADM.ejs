@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>RADTEK - ADM</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/paineladm.css">
+    <link rel="icon" href="/setting/logo.gif">
+
+</head>
+<script>
+    $('document').ready(() => {
+        $('.teste4444').append('<li class="nav-item dropdown"><button class="nav-link dropdown-toggle btn btn-danger" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="identify"><%=logADM.usuario%></span><img class="avatar" src="/upload_user/perfil_masculino.png"></button><div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink"><a class="dropdown-item" href="/logoutADM">Sair</a></div></li>')
+    })
+
+
+    pedidosADM = () => {
+        $('.adm').remove()
+        $('.pedidos').css('backgroundColor', 'rgb(238, 238, 110)')
+        $('.adcproduto').css('backgroundColor', 'white')
+        $('.usuario').css('backgroundColor', 'white')
+
+        $(".conteudo").append('<div class="row marcador justify-content-center content mt-5 adm"><%allpedidos.forEach(allpedidos=>{%><div class="row justify-content-center pedido"><div class="imagepedido col-md-1"><img src="<%=allpedidos.image%>" alt="image"></div> <div class="infopedido row col-md-7 align-items-center"> <div class="col-md-2"><p><%=allpedidos.user%></p></div><div class="col-md-4"> <p><%=allpedidos.produto%></p> </div> <div class="col-md-6"><p><%=allpedidos.endereco%></p></div></div>\<div class="acaopedido col-md-4 row align-items-center">\<button class="btn btn-success">Detalhe</button>\<button class="btn btn-danger ">Processos</button>\<button class="btn btn-info ">cancelar</button>\<button class="btn btn-warning ">gerenciar</button></div>\</div>\<%})%>\</div>')
+
+
+    }
+    adcproduto = () => {
+        $('.adm').remove()
+        $('.adcproduto').css('backgroundColor', 'rgb(238, 238, 110)')
+        $('.pedidos').css('backgroundColor', 'white')
+        $('.usuario').css('backgroundColor', 'white')
+
+        // mascaras
+        $('document').ready(()=>{
+             $('.fretevalor').mask('#.##0,00', { reverse: true });
+            $('#valor').mask('#.##0,00', { reverse: true });
+        })
+
+
+        $(".conteudo").append('<div class="row painel"><div class="container col-xl-6 adm"><form method="POST" enctype="multipart/form-data" action="/registerProd"><div class="form-group"><label for="name">Nome do Produto</label><input type="text" class="form-control" id="name" name="nome" required></div> <div class="form-group"><label for="valor">Valor</label> <input type="text" class="form-control" id="valor" name="valor" required autocomplete="off"></div><div class="form-group"> <label for="categoria">Categoria</label><select class="form-control" name="categoria" id="categoria" value="selecione" required><option value="Selecione" selected disabled>--Selecione --</option><%categoria.forEach(categoria=>{%><option value="<%=categoria.nome%>"><%=categoria.nome%></option><%})%></select></div><div class="form-group"><label for="image">Imagem</label> <input type="file" id="image" name="imagem" required> </div><div class="form-group"><label>Frete</label><input class="form-control fretevalor mt-2" type="text" name="frete" required autocomplete="off"></div><div class="form-group"><label for="desc">Descricao</label><textarea class="form-control" id="desc" name="descricao" required ></textarea></div><div class="form-group"><label for="estoque">Quantidade</label><input type="number" class="form-control" id="estoque" name="estoque" value="1" required autocomplete="off"></div><div class="form-group"><input type="submit" class="btn btn-success" value="Cadastrar"><input type="reset" class="btn btn-danger" value="Limpar"></div></form></div><div class="container col-xl-6 adm"> <form method="POST" action="/insertcategoria"><div class="form-group"><label for="nome">Nova Categoria</label><input class="form-control" type="text" name="nome" id="nome" required></div><div class="form-group"><input type="submit" class="btn btn-success" value="Registrar"> <input type="reset" class="btn btn-danger" value="Limpar campo"> </div> </form></div> </div>')
+
+    }
+    usuariosADM = () => {
+        $('.adm').remove()
+        $('.usuario').css('backgroundColor', 'rgb(238, 238, 110)')
+        $('.pedidos').css('backgroundColor', 'white')
+        $('.adcproduto').css('backgroundColor', 'white')
+        $(".conteudo").append('<div class="row marcador justify-content-center content mt-5 adm"><%allusers.forEach(allusers=>{%><div class="row justify-content-center user"><div class="col-md-8"><div class="col-md-3"><label>Nome Completo</label><p> <%=allusers.name%></p></div><div class=" col-md-3 "><label>Nick</label><p><%=allusers.user%></p></div><div class=" col-md-3 "><label>Senha</label><p><%=allusers.password%></p> </div><div class=" col-md-3 "><label>Email</label><p><%=allusers.email%></p></div> </div><div class="acaouser col-md-3 align-items-center mt-5"><button class="btn btn-success w-100">Historico</button><button class="btn btn-info w-100">Gerenciar</button><button class="btn btn-danger w-100">Deletar</button></div></div><%})%></div>')
+    }
+
+    // pedidos , adcproduto , usuario
+
+</script>
+
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg nav">
+            <a class="navbar-brand" href="/"><img class="logo" src="/setting/Logo.gif" alt="Logo"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavDropdown">
+                <ion-icon class="dropdownX" name="reorder-four-outline"></ion-icon>
+
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto teste4444 text-white">
+                    <li class="nav-item mr-2">
+                        <a class=" btn btn-success" href="/" target="_blank">pagina inicial</a>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <button onclick="adcproduto()" class=" btn btn-light adcproduto">adicionar produto</button>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <button onclick="pedidosADM()" class=" btn btn-light pedidos">todos pedidos</button>
+                    </li>
+
+                    <li class="nav-item mr-2">
+                        <button onclick="usuariosADM()" class=" btn btn-light usuario">lista de usuarios</button>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+
+        <hr>
+        <div class="conteudo">
+
+        </div>
+
+    </main>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
